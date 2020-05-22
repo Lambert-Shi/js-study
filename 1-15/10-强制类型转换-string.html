@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			/**
+			 * 强制类型转换
+			 * 		将一个数据类型强制转化为其他的数据类型:toString方法和String函数
+			 */
+			var a = 123;
+			console.log(typeof a);
+			
+			var b = a.toString();
+			console.log(typeof b)
+			
+			var c = true;
+			console.log(typeof c);
+			var d = c.toString();
+			console.log(typeof d);
+			
+			var e = null;
+			console.log(typeof e);
+			
+			var f = undefined;
+			var g =  String(f);
+			console.log(typeof g);
+			/* 
+					null和undefined这两个值没有toString()方法
+					这时候可以使用String()
+			 */
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
