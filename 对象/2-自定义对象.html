@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 对象字面量定义,属性可以加""也可以不加
+			var objA = {
+				name:"shikui",
+				age:23
+			};
+			console.log(objA);
+			/**
+			 * 如果读取未定义的对象，则会undefined，和变量中的不一样（变量中的会报错）
+			 */
+			var obj = new Object();
+			obj.name = '顺猴子';
+			obj.gender = '男';
+			/**
+			 * 可以使用delete删除属性名
+			 */
+			delete obj.name;
+			console.log(obj);
+			
+			/**
+			 * 对象的属性名不强制要求遵守标识符的规范
+			 */
+			obj.var = 'haha';
+			console.log(obj.var);
+			
+			/**
+			 * 如果要使用特殊的属性名，则
+			 */
+			obj["123"] = 789;
+			console.log(obj);
+			console.log(obj["123"]);
+			
+			/**
+			 * in运算符:判断对象中是否含有对应的属性
+			 */
+			console.log("var" in obj);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

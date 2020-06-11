@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 函数也可以是对象的一个属性
+			 */
+			var obj = {
+				name: '猪八戒',
+				age:200,
+				add:'天庭',
+				eat: function(){
+					console.log(obj.name);
+				}
+			}
+			
+			console.log(obj.eat);
+			// 调用函数
+			console.log(obj.eat());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

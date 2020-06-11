@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 如果把方法定义在对象里面
+			 * 那么创建100个对象就会创建100个方法
+			 * 把对象里面的方法定义为全局方法
+			 * 那么方法就只会创建一次
+			 */
+			
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.sayName = fun;
+			}
+			
+			function fun(name){
+				alert("我的名字叫:" + this.name);
+			}
+			
+			var v1 = new Person("孙悟空",18,"男");
+			var v2 = new Person("嘎嘎",18,"男");
+			console.log(v1.sayName() == v2.sayName());
+		</script>
+	</body>
+</html>

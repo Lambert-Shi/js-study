@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function sum(a,b){
+				console.log(a+b);
+			}
+			// sum(1,2);
+			// // 对于有可能可能会收到非法的参数，我们要对类型进行检查
+			// sum(true,false);
+			// // 调用函数时，多余的参数不会被赋值，如果实参的数量少于形参的数量，那没有对于参数的，则是undefined
+			// sum();
+			
+			// 实参既可以是一个函数，也可以为一个对象，也可以为一个引用
+			function a(params){
+				console.log(a);
+				params();
+			}
+			
+			function b(){
+				console.log("i is B");
+			}
+			
+			a(b);
+			
+			// a 函数对象 a()调用函数
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

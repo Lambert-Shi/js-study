@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//使用工厂创建的对象，都是Object
+			//就导致我们无法区分出多种不同类型的对象
+			function createPerson(name,age,gender){
+				var obj = new Object();
+				obj.name = name;
+				obj.age = age;
+				obj.gender = gender;
+				obj.sayName = function(){
+					alert(this.name);
+				};
+				return obj;
+			}
+			var obj1 = createPerson("猪八戒",20,"男");
+			var obj2 = createPerson("顺悟空",20,"男");
+			var obj3 = createPerson("哈哈哈",20,"男");
+			
+			obj1.sayName();
+			obj2.sayName();
+			obj3.sayName();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

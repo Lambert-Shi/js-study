@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/**	P67
+			 * 原型prototype         相当于java中的静态区
+			 * 我们每创建一个对象，解析器都向函数中添加一个属性prototype指向我们原型对象
+			 * 当函数以构造方法的形式调用时，他所创建的对象中会有一个隐含属性
+			 * 指向该对象的原型对象，我们可以通过__proto__来访问该属性
+			 * 
+			 * 当我们访问一个对象的一个属性或者一个方法的时候，他会先再对象中寻找，如果有就直接使用
+			 * 如果没有会去原型对象中寻找
+			 */
+			function Person(){
+				
+			}
+			
+			Person.prototype.a = "哈哈哈";
+			/**
+			 * 之前我们会在全局中添加方法，但是会污染全局作用域，
+			 * 我们可以使用原型定义，就不会污染了
+			 */
+			Person.prototype.sayName = function(){
+				alert("我是狗");
+			}
+			
+			var p = new Person();
+			p.b = "c";
+			
+			console.log(Person.prototype);
+			console.log(p.__proto__);
+			console.log(Person.prototype == p.__proto__);
+			// 看对象中有没有这个属性，包括原型对象中的属性
+			console.log("a" in p);
+			// 看对象中有没有这个属性，不包括原型对象中的属性
+			console.log(p.hasOwnProperty("b"))
+			
+			p.sayName();
+			// 我们发现这个hasOwnProperty方法是原型中的原型的
+			console.log(p.__proto__.__proto__.hasOwnProperty("hasOwnProperty"));
+			
+			
+			/**
+			 * 原型链：https://www.cnblogs.com/loveyaxin/p/11151586.html
+			 */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

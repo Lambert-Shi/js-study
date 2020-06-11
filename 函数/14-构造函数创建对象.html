@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 构造函数和普通函数没有什么区别，就是开头是大写
+			 * 调用方式不同
+			 * 普通函数直接调用，构造函数使用new调用
+			 * 构造函数的执行流程
+			 * 1、立刻创建一个新的对象
+			 * 2、将新建的函数设置为函数中的this
+			 * 3、逐条执行函数中的代码
+			 * 4、把新的对象进行返回
+			 * 
+			 * this的三种情况：
+			 * 1、当以函数的形式调用时，this就是windows
+			 * 2、当以方法的形式调用时，this就是调用此方法的对象
+			 * 3、当以构造函数时调用时，this就是新创建的对象
+			 */
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				this.sayName = function(){
+					alert(this.name);
+				}
+			}
+			var per = new Person("Lambert.Shi",20);
+			console.log(per);
+			
+			console.log(per instanceof Person);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

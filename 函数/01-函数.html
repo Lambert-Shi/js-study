@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 1、函数可以在函数内部申明
+			// 使用new创建函数
+			var fun = new Function();
+			console.log(fun);
+			// 声明函数
+			function fun2(){
+				alert("这个是fun2");
+			}
+			fun2();
+			
+			// 匿名函数
+			var fun3 = function(){
+				console.log("我是匿名函数");
+			};
+			
+			fun3();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
