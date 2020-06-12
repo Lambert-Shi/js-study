@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * JS里面得toString方法和JAVA里面得没啥区别。。。
+			 * 我这里直接给原型里面加，每个对象公用一个toString方法
+			 */
+			function Person(name,age,gender){
+				this.name = name;
+				this.age = age;
+				this.gender = gender;
+			}
+			
+			Person.prototype.toString = function(){
+				return "Person[name = " + this.name + ",age = " + this.age + ",gender = " + this.gender + "]"
+			};
+			var p = new Person("Lambert",11,true);
+			console.log(p.toString());
+			console.log(p);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
